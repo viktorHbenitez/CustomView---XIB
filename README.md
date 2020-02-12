@@ -1,5 +1,3 @@
-
-
 # XiB and NIB Files : 
 
 ### Description:  
@@ -39,6 +37,4 @@ class GenericFileOwner: UIView {
     ...
 }
 ```
-
-![workflow](https://github.com/viktorHbenitez/RWNibFiles-Swift/blob/master/Sketch/sketch1.png)  
-
+![workflow](https://github.com/viktorHbenitez/CustomView---XIB/blob/master/Sketch/sketch1.png)  
