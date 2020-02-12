@@ -1,21 +1,17 @@
+//
+//  GNCView.swift
+//  AddViewIntoView
+//
+//  Created by Victor Hugo Benitez Bosques on 2/11/20.
+//  Copyright © 2020 Victor Hugo Benitez Bosques. All rights reserved.
+//
 
+import UIKit
 
-# XiB and NIB Files : 
+class GNCView: UIView {
+  
+}
 
-### Description:  
-
-Create a view instance with XIB File and create a View with outlet reference  
-
-Steps:
-
-1. Create a Generic XIb and Controller
-2. Asign File owner
-3. Load the Nib (Generic Xib ) in the File Owner
-
-Call the generic xib file in the init frame method and init aDecoder method  
-
-
-```swift
 
 class GenericFileOwner: UIView {
     
@@ -36,9 +32,15 @@ class GenericFileOwner: UIView {
         print("super.init(coder: aDecoder) ")
     }
     
-    ...
+    
+    @IBAction func tapped(){
+        print("tapped button")
+    }
+    
+    
+    func addGeneriView(){
+        if let xib = Bundle.main.loadNibNamed(GNCView.identifierView, owner: self, options: nil)?.first as? GNCView{
+            addSegmentView(xib, constraintTo: self)
+        }
+    }
 }
-```
-
-![workflow](https://github.com/viktorHbenitez/RWNibFiles-Swift/blob/master/Sketch/sketch1.png)  
-

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AddViewIntoView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QfA-0Z-uad">
+                                <rect key="frame" x="30" y="298" width="354" height="300"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" placeholder="YES" id="Tg0-gG-Z7R"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-tL-Vvs" customClass="GenericFileOwner" customModule="AddViewIntoView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" placeholder="YES" id="2aG-e8-j2q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X3g-tL-Vvs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="268-mP-kFj"/>
+                            <constraint firstItem="X3g-tL-Vvs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4UY-JY-mLL"/>
+                            <constraint firstItem="QfA-0Z-uad" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Icw-xU-Xkd"/>
+                            <constraint firstItem="X3g-tL-Vvs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ipf-kt-9AD"/>
+                            <constraint firstItem="QfA-0Z-uad" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Oo3-8Z-eY1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X3g-tL-Vvs" secondAttribute="trailing" id="Yet-Ym-62I"/>
+                            <constraint firstItem="QfA-0Z-uad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lE2-bR-THP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QfA-0Z-uad" secondAttribute="trailing" constant="30" id="wVp-7v-WBA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="gnrStack" destination="QfA-0Z-uad" id="uJf-f8-OCm"/>
+                        <outlet property="viewCustom" destination="X3g-tL-Vvs" id="wko-yi-OiS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
